@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:15.1
+    environment:
+      - POSTGRES_DB=vulnman
+      - POSTGRES_USER=vulnman
+      - POSTGRES_PASSWORD=vulnman
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_NAME=vulnman
+      - POSTGRES_USER=vulnman
+      - POSTGRES_PASSWORD=vulnman
+      - DJANGO_SETTINGS_MODULE=vulnman.settings.local
+    depends_on:
+      - db
