@@ -1,7 +1,7 @@
 django==4.1.7
 cvss==2.5
 djangorestframework==3.14.0
-Pillow==9.3.0
+Pillow==10.0.1
 markdown==3.4.1
 bleach==5.0.1
 gunicorn==20.1.0
