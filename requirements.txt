@@ -11,7 +11,7 @@ crispy-bootstrap5==0.7
 django-guardian==2.4.0
 matplotlib==3.6.0
 django-cors-headers==3.13.0
-pygments==2.13.0
+pygments==2.15.0
 django-filter==22.1
 pyaml==21.10.1
 django-modeltranslation==0.18.5
